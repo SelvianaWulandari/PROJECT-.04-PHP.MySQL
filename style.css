@@ -282,3 +282,31 @@ li {
 h2 {
   line-height: 1.5;
 }
+#ayat_alkitab_favorite {
+  border-collapse: collapse;
+  width:90%;
+  background-color: #535a60;
+  margin-right: auto;
+  margin-right: auto;
+}
+
+#ayat_alkitab_favorite td, #ayat_alkitab_favorite th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#ayat_alkitab_favorite tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+#ayat_alkitab_favorite tr:hover {
+  background-color: #ddd;
+}
+
+#ayat_alkitab_favorite th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #6b1010;
+  color:white;
+}

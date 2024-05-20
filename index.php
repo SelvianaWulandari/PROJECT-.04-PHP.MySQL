@@ -1,3 +1,8 @@
+<?php
+$db = mysqli_connect("localhost: 3307", "root", "admin", "portfolio");
+$data = mysqli_query($db, "SELECT * FROM ayat_alkitab_favorite");
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -25,6 +30,23 @@
       <p>Menapaki setiap petualangan kecil dan menemukan keindahan dalam setiap momen, Selamat datang di dunia kecil saya yang penuh refleksi💐. Halo Semuanya Perkenalkan nama saya Selviana Wulandari!👋Saya seorang mahasiswi di Jurusan Elektro dengan Program Studi Informatika⚡ Universitas Sam Ratulangi.</p>
       <p>Perkembangan teknologi masa kini mengalami kemajuan pesat dan memberikan banyak manfaat bagi manusia. Teknologi telah mengubah cara hidup manusia dalam berbagai aspek.</p>
     </section>
+    <table id="ayat_favorite">
+    <tr>
+        <th>Kitab</th>
+        <th>Pasal</th>
+        <th>Ayat</th>
+    </tr>
+
+<?php while ($row = mysqli_fetch_array($data)) : ?>
+
+    <tr>
+        <td><?= $row["Kitab"]; ?></td>
+        <td><?= $row["Pasal"]; ?></td>
+        <td><?= $row["Ayat"]; ?></td>
+    </tr>
+
+    <?php endwhile;; ?>
+</table>
     <section id="Gallery">
       <h2>Gallery Selvi 🌻</h2>
       <p>Berikut adalah beberapa foto-foto saya dalam organisasi dan juga kegiatan.</p>
